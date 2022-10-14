@@ -8,8 +8,9 @@ import Navigation from "./Navigation";
 // 라우터 v6: 리액트를 다루는 기술 328페이지 참조
 // 리다이렉트: https://reactrouter.com/en/v6.3.0/getting-started/tutorial#adding-a-no-match-route, https://devalice.tistory.com/112, https://stackoverflow.com/questions/69868956/how-can-i-redirect-in-react-router-v6
 function AppRouter({ isLoggedIn, userObj, refreshUser, setIsLoggedIn }) {
+  //https://medium.com/@_diana_lee/react-react-router-적용한-react-앱을-github-pages로-배포하는-법-5f6119c6a5d9
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {isLoggedIn && <Navigation userObj={userObj} />}
       <Routes>
         {isLoggedIn ? (
