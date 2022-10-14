@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/jonyChoiGenius/jonyNwitter.git/static/js/main.f7c683e3.js",
-    "index.html": "/jonyChoiGenius/jonyNwitter.git/index.html",
-    "main.f7c683e3.js.map": "/jonyChoiGenius/jonyNwitter.git/static/js/main.f7c683e3.js.map"
+    "main.js": "/jonyNwitter/static/js/main.3245bad2.js",
+    "index.html": "/jonyNwitter/index.html",
+    "main.3245bad2.js.map": "/jonyNwitter/static/js/main.3245bad2.js.map"
   },
   "entrypoints": [
-    "static/js/main.f7c683e3.js"
+    "static/js/main.3245bad2.js"
   ]
 }
