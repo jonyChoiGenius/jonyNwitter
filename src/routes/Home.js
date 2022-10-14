@@ -25,10 +25,10 @@ function Home({ userObj }) {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <NweetFactory userObj={userObj} />
 
-      <div>
+      <div style={{ marginTop: 30 }}>
         {nweets.map((nweet) => (
           <Nweet
             key={nweet.id}
@@ -37,7 +37,7 @@ function Home({ userObj }) {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

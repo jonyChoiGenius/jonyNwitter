@@ -1,6 +1,8 @@
 import { dbService, storageService } from "fbase";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function NweetFactory({ userObj }) {
   const [nweet, setNweet] = useState("");
@@ -8,6 +10,7 @@ function NweetFactory({ userObj }) {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    if (nweet === "") return;
     let attachmentUrl = "";
     if (attachment !== "") {
       const attachmentRef = storageService
@@ -56,16 +59,23 @@ function NweetFactory({ userObj }) {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <input
-          value={nweet}
-          onChange={onChange}
-          type="text"
-          placeholder="아무 말이나 지껄이세요."
-          maxLength={120}
-        ></input>
-        <input type="file" accept="image/*" onChange={onFileChange} />
-        <input type="submit" value="Nweet" />
+      <form onSubmit={onSubmit} className="factoryForm">
+        <div className="factoryInput__container">
+          <input
+            className="factoryInput__input"
+            value={nweet}
+            onChange={onChange}
+            type="text"
+            placeholder="아무 말이나 지껄이세요."
+            maxLength={120}
+          ></input>
+          <input type="submit" value="&rarr;" className="factoryInput__arrow" />
+        </div>
+        <label htmlFor="attach-file" className="factoryInput__label">
+          {/* <input type="file" accept="image/*" onChange={onFileChange} /> */}
+          <span>사진 추가</span>
+          <FontAwesomeIcon icon={faPlus} />
+        </label>
         {attachment && (
           <div>
             <img src={attachment} width="50px" height="50px" />

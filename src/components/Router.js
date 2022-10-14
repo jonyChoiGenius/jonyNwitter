@@ -26,7 +26,7 @@ function AppRouter({ isLoggedIn, userObj, refreshUser, setIsLoggedIn }) {
             <Route path="/" element={<Auth />}></Route>
           </>
         )}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
       </Routes>
     </BrowserRouter>
   );

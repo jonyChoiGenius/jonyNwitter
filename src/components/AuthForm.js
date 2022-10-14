@@ -39,7 +39,7 @@ function AuthForm() {
   };
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="container">
         <input
           name="email"
           type="email"
@@ -47,6 +47,7 @@ function AuthForm() {
           required
           value={email}
           onChange={onChange}
+          className="authInput"
         />
         <input
           name="password"
@@ -55,12 +56,17 @@ function AuthForm() {
           required
           value={password}
           onChange={onChange}
+          className="authInput"
         />
         {/* Auth로 보낼 밸류값(해당 밸류값에 따라 create와 log in 함수 실행이 달라짐) */}
-        <input type="submit" value={newAccount ? "Create Account" : "Log in"} />
-        {error}
+        <input
+          type="submit"
+          value={newAccount ? "Create Account" : "Log in"}
+          className="authInput authSubmit"
+        />
+        {error && <span className="authError">{error}</span>}
       </form>
-      <span onClick={toggleAccount}>
+      <span onClick={toggleAccount} className="authSwitch">
         {newAccount ? "기존 계정으로 로그인 하기" : "새 계정 만들기"}
       </span>
     </>
