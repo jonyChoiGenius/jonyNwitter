@@ -10,7 +10,7 @@ import Navigation from "./Navigation";
 function AppRouter({ isLoggedIn, userObj, refreshUser, setIsLoggedIn }) {
   //https://medium.com/@_diana_lee/react-react-router-적용한-react-앱을-github-pages로-배포하는-법-5f6119c6a5d9
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       {isLoggedIn && <Navigation userObj={userObj} />}
       <Routes>
         {isLoggedIn ? (
@@ -28,7 +28,7 @@ function AppRouter({ isLoggedIn, userObj, refreshUser, setIsLoggedIn }) {
         )}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
