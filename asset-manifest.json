@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "https://jonyChoiGenius.github.io/jonyNwitter/static/js/main.a3e6f58e.js",
+    "main.js": "https://jonyChoiGenius.github.io/jonyNwitter/static/js/main.23b22f72.js",
     "index.html": "https://jonyChoiGenius.github.io/jonyNwitter/index.html",
-    "main.a3e6f58e.js.map": "https://jonyChoiGenius.github.io/jonyNwitter/static/js/main.a3e6f58e.js.map"
+    "main.23b22f72.js.map": "https://jonyChoiGenius.github.io/jonyNwitter/static/js/main.23b22f72.js.map"
   },
   "entrypoints": [
-    "static/js/main.a3e6f58e.js"
+    "static/js/main.23b22f72.js"
   ]
 }
